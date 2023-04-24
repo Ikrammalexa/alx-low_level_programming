@@ -1,14 +1,15 @@
-#include <stdio.h>
-#include <unisted.h>
+#include<unistd.h>
 
 /**
-* main - Entry point 
-*
-* Return Always 1 (Success)
-*/
+ * main - Entry point
+ *
+ *      ssize_t write(int fd, const void *buf, size_t coun);
+ *
+ *      Return: 1 (error).
+ */
+
 int main(void)
-{
-	Write(2,
-	"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
-        return (1);
+{	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	write(1, quo, 59);
+	return (1);
 }
